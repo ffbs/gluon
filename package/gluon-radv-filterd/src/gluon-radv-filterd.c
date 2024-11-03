@@ -388,7 +388,7 @@ static void handle_ra(int sock) {
 	// find prefix option
 	len -= sizeof(pkt.hdr);
 	ptr = (uint8_t*)&pkt + sizeof(pkt.hdr);
-	
+
 	while (len >= 8) {
 		unsigned int o_type = ptr[0];
 		unsigned int o_len = (unsigned int)ptr[1] << 3;
@@ -683,7 +683,7 @@ static void update_redirect(void) {
 		char prefix[INET6_ADDRSTRLEN];
 
 		if (router->redirected || router->expired)
-		    continue;
+			continue;
 		router->redirected = true;
 
 		snprintf(mac, sizeof(mac), F_MAC, F_MAC_VAR(router->src));
