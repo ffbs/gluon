@@ -6,9 +6,9 @@ local ll = "2001:bf7:382::1"
 local f = io.open("/tmp/range6","r")
 
 if f then
-    local range6 = f:read('*a')
-    f:close()
+	local range6 = f:read('*a')
+	f:close()
 
-    io.write("-i br-client -p " .. range6)
-    io.write(" --rdnss " .. ll)
+	io.write("-i br-client -p " .. range6)
+	io.write(" --rdnss " .. ll)
 end
